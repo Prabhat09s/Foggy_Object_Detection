@@ -1,7 +1,8 @@
 import torch
 import torch.nn as nn
 from .msffa.msffa import MSFFANet
-from .yolo.yolov7 import YOLOv7
+# from .yolo.yolov7 import YOLOv7
+from .yolo.yolov7 import YOLOv8
 
 class MSFFA_YOLO(nn.Module):
     """
@@ -14,7 +15,7 @@ class MSFFA_YOLO(nn.Module):
         self.msffa = MSFFANet()
         
         # Detection Subnet
-        self.yolo = YOLOv7(num_classes=num_classes)
+        self.yolo = YOLOv8(num_classes=num_classes)
 
     def forward(self, x):
         # 1. Restoration

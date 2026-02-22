@@ -9,10 +9,8 @@ def run_detection():
 
     # Define source image (using the built-in sample from ultralytics if possible, or a placeholder)
     # Ultralytics can handle URLs directly.
-    source = 'https://ultralytics.com/images/bus.jpg'
-    
-    print(f"Running detection on {source}...")
-    
+    # source = 'https://ultralytics.com/images/bus.jpg'
+    source = 'https://images.pexels.com/photos/19447954/pexels-photo-19447954.jpeg?cs=srgb&dl=pexels-thealmani-19447954.jpg&fm=jpg'
     # Run inference
     results = model(source)
 
