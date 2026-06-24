@@ -40,6 +40,7 @@ if uploaded_file is not None:
         annotated_image = results[0].plot()
 
         # Convert BGR → RGB
+        # annotated_image = cv2.cvtColor(annotated_image, cv2.COLOR_BGR2RGB)
         annotated_image = cv2.cvtColor(annotated_image, cv2.COLOR_BGR2RGB)
 
         st.image(annotated_image, caption="Detection Result", use_column_width=True)
