@@ -3,6 +3,7 @@ import torch
 import numpy as np
 from PIL import Image
 from ultralytics import YOLO
+import cv2
 
 # Load YOLOv8 model
 @st.cache_resource
