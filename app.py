@@ -27,7 +27,7 @@ uploaded_file = st.file_uploader("Upload Foggy Image", type=["jpg", "png", "jpeg
 
 if uploaded_file is not None:
 
-    image = Image.open(uploaded_file)
+    image = Image.open(uploaded_file).convert("RGB")
     image_np = np.array(image)
 
     st.image(image, caption="Original Image", use_column_width=True)
